@@ -48,6 +48,23 @@ body{
 .simon{
     transform: rotate(45deg);
     margin-top: 64px;
+    position: relative;
+}
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    width: 200px;
+    height: 200px;
+    background-color: #111;
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 24px;
+    color: #666;
 }
 
 .over{

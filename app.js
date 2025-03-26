@@ -13,13 +13,17 @@ const perdu = document.querySelector(".perdu")
 const clicSound =  new Audio('./sounds/tap.wav');
 const failSound = new Audio("./sounds/losing.wav")
 const goSound = new Audio("./sounds/notif.wav")
+
 but.addEventListener("click",()=>{
     playSound(goSound)
     player= 1;
     counter =0
     phrase =[]
     enlevePerdu()
-    simonPlay()
+    setTimeout(()=>{
+        simonPlay()
+    },2000)
+    
 })
 
 
