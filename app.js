@@ -1,14 +1,21 @@
+/**
+ * Game variables
+ */
 let phrase =[]
 let player = 1
 let counter = 0
+const colors =["red","green","blue","yellow"]
 
+/**
+ * DOM elements
+ */
 const cs = document.querySelectorAll(".c")
 const who = document.querySelector(".who")
 const but = document.querySelector(".perdu button")
 const perdu = document.querySelector(".perdu")
 
 /**
- * Sons
+ * Sounds
  */
 const clicSound =  new Audio('./sounds/tap.wav');
 const failSound = new Audio("./sounds/losing.wav")
@@ -36,13 +43,13 @@ function select(elt){
     },500)
 }
 
-const colors =["red","green","blue","yellow"]
+
 
 
 
 function simonPlay(){
     afficheQui()
-    let n = Math.ceil(Math.random()*3)
+    let n = Math.ceil(Math.random()*4)-1
   
     let selected = colors[n]
     phrase.push(selected)
@@ -59,10 +66,6 @@ function simonPlay(){
         afficheQui()
     }, 1000*phrase.length);
     
-}
-
-function playerPlay(){
-    counter = 0
 }
 
  cs.forEach(c=>{
